@@ -60,7 +60,7 @@ window.TasksTableComponent = (function (window) {
             var tableEl = document.createElement('table');
             tableEl.setAttribute('class', 'Tasks');
             for (var i = 0; i < self.tasks.length; i++) {
-                var task = self.tasks[i];
+                let task = self.tasks[i];
                 if (i === 0) {
                     tableEl.append(getHeaderElement(task));
                 }
