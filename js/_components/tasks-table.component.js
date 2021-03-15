@@ -133,8 +133,8 @@ window.TasksTableComponent = (function (window) {
         }
 
         function setTasks(tasks) {
-            this.tasks = tasks;
-            this.aggregatedValues = getAggregatedValues(tasks);
+            self.tasks = tasks;
+            self.aggregatedValues = getAggregatedValues(tasks);
         }
 
         /**
