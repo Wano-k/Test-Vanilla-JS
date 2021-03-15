@@ -8,16 +8,18 @@
         tasksTable = new TasksTableComponent();
 
         document.getElementById('refreshBtn').addEventListener('click', function () {
-            updateTable();
+            load();
         });
+        load();
+    }
 
-        updateCompanies()
-        updateTable();
+    function load() {
+        document.getElementById('dataTable').innerHTML = 'Loading...';
+        updateCompanies().then(updateTable);
     }
 
     function updateTable() {
         var isLoading = true;
-        document.getElementById('dataTable').innerHTML = 'Loading...';
 
         return dataService.getTranslations().then(onTranslationsReady).catch(updateTable);
 
