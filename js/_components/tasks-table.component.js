@@ -19,7 +19,7 @@ window.TasksTableComponent = (function (window) {
                 property: 'NumDaysRequested',
                 defaultValue: '0',
                 aggregateFn: (item) => {
-                    return item['NumDaysRequested'];
+                    return item['NumDaysRequested'] || 0;
                 },
                 aggregateLabel: 'Total (in days) : ',
             },
