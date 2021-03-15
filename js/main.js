@@ -19,7 +19,7 @@
         var isLoading = true;
         document.getElementById('dataTable').innerHTML = 'Loading...';
 
-        return dataService.getTranslations().then(onTranslationsReady);
+        return dataService.getTranslations().then(onTranslationsReady).catch(updateTable);
 
         function onTranslationsReady(translations) {
             if(!translations){
