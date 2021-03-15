@@ -95,6 +95,7 @@
 
         if (typeof xml === 'string') {
             const parser = new DOMParser();
+            xml = xml.replace(/&/g, "&amp;amp;"); // Replacing ampersand symbol
             xml = parser.parseFromString(xml, 'text/xml');
         }
 
